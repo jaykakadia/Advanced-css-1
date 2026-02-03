@@ -294,7 +294,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   z-index: 100;
   background: transparent;
 }
@@ -571,44 +571,44 @@ input {
 }
 .project-card:hover::before {
   bottom: -8px;
-  width: 70%;
+  width: 75%;
   background: currentColor;
 }
 .project-card:hover::after {
   bottom: -14px;
-  width: 40%;
+  width: 65%;
   background: currentColor;
 }
 .project-card.orange {
   background: #fde5cc;
 }
 .project-card.orange:hover::before, .project-card.orange:hover::after {
-  background: #f97316;
+  background: #fde5cc;
 }
 .project-card.green {
   background: #b4f1ce;
 }
 .project-card.green:hover::before, .project-card.green:hover::after {
-  background: #10b981;
+  background: #b4f1ce;
 }
 .project-card.pink {
   background: #ffd3e2;
 }
 .project-card.pink:hover::before, .project-card.pink:hover::after {
-  background: #ec4899;
+  background: #ffd3e2;
 }
 .project-card.purple {
   background: #e9e7fd;
 }
 .project-card.purple:hover::before, .project-card.purple:hover::after {
-  background: #8b5cf6;
+  background: #e9e7fd;
 }
 .project-card.blue {
   background: #ffffff;
   box-shadow: rgba(58, 58, 58, 0.2) 0px 1px 10px 1px;
 }
 .project-card.blue:hover::before, .project-card.blue:hover::after {
-  background: #3b82f6;
+  background: #daf6fc;
 }
 
 .project-header {
@@ -845,13 +845,14 @@ input {
 .message-item {
   display: flex;
   gap: 12px;
-  padding: 1rem 1.16rem;
+  padding: 1.5rem 1.66rem;
   position: relative;
   transition: background 0.3s ease;
 }
 .message-item:hover {
   cursor: pointer;
   background: #ffffff;
+  transform: scale(1.05);
 }
 .message-item:last-child {
   margin-bottom: 0;

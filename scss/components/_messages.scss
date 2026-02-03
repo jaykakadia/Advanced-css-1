@@ -58,7 +58,7 @@
 .message-item {
   display: flex;
   gap: 12px;
-  padding: $spacing-md 1.16rem;
+  padding: ($spacing-md  + 0.5rem) (1.16rem + 0.5rem);
   position: relative;
   @include transition(background);
 
@@ -69,6 +69,7 @@
   &:hover {
     cursor: pointer;
     background: $color-white;
+    transform: scale(1.05);
   }
 
   &:last-child {
