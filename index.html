@@ -18,29 +18,29 @@
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <aside class="sidebar">
-      <button class="sidebar-btn menu">
+      <button class="sidebar-btn menu" title="Toggle menu">
         <i class="ph ph-list"></i>
       </button>
-      <button class="sidebar-btn active">
+      <button class="sidebar-btn active" title="Home">
         <i class="ph-fill ph-house-simple"></i>
       </button>
-      <button class="sidebar-btn">
+      <button class="sidebar-btn" title="Profile">
         <i class="ph ph-user"></i>
       </button>
-      <button class="sidebar-btn">
+      <button class="sidebar-btn" title="Projects">
         <i class="ph ph-folder-simple"></i>
       </button>
-      <button class="sidebar-btn">
+      <button class="sidebar-btn" title="Schedule">
         <i class="ph ph-clock"></i>
       </button>
-      <button class="sidebar-btn">
+      <button class="sidebar-btn" title="Analytics">
         <i class="ph ph-chart-line-up"></i>
       </button>
-      <button class="sidebar-btn">
+      <button class="sidebar-btn" title="Messages">
         <i class="ph ph-chat-circle-dots"></i>
       </button>
     </aside>
@@ -48,9 +48,6 @@
     <main class="main-content">
       <header class="header">
         <div class="header-left">
-          <button class="menu-btn">
-            <i class="ph ph-list"></i>
-          </button>
           <h1 class="header-title">Portfolio</h1>
           <div class="search-box">
             <i class="ph ph-magnifying-glass search-icon"></i>
@@ -58,10 +55,10 @@
           </div>
         </div>
         <div class="header-right">
-          <button class="add-btn">
+          <button class="add-btn" title="Add new project">
             <i class="ph ph-plus"></i>
           </button>
-          <button class="notification-btn">
+          <button class="notification-btn" title="Notifications">
             <i class="ph ph-bell"></i>
           </button>
           <div class="user-profile">
@@ -108,10 +105,10 @@
               <div class="stat-label">Total Project</div>
             </div>
             <div class="view-options">
-              <button class="view-btn">
+              <button class="view-btn" title="Grid view">
                 <i class="ph ph-squares-four"></i>
               </button>
-              <button class="view-btn active">
+              <button class="view-btn active" title="List view">
                 <i class="ph ph-list"></i>
               </button>
             </div>
@@ -121,7 +118,7 @@
             <article class="project-card orange">
               <div class="project-header">
                 <span class="project-date">July 2, 2020</span>
-                <button class="project-menu">
+                <button class="project-menu" title="More options">
                   <i class="ph ph-dots-three-vertical"></i>
                 </button>
               </div>
@@ -146,7 +143,7 @@
                     class="project-avatar"
                   />
                 </div>
-                <button class="add-btn" style="background: #f97316">
+                <button class="add-btn add-btn-orange" title="Add team member">
                   <i class="ph ph-plus"></i>
                 </button>
                 <span class="time-badge orange">2 Days Left</span>
@@ -156,7 +153,7 @@
             <article class="project-card purple">
               <div class="project-header">
                 <span class="project-date">July 5, 2020</span>
-                <button class="project-menu">
+                <button class="project-menu" title="More options">
                   <i class="ph ph-dots-three-vertical"></i>
                 </button>
               </div>
@@ -164,7 +161,7 @@
               <p class="project-subtitle">Shopping</p>
               <span class="progress-label">Progress</span>
               <div class="progress-bar">
-                <div class="progress-fill purple" style="width: 30%"></div>
+                <div class="progress-fill purple progress-30"></div>
               </div>
               <span class="progress-percentage">30%</span>
               <hr class="white-line" />
@@ -181,7 +178,7 @@
                     class="project-avatar"
                   />
                 </div>
-                <button class="add-btn" style="background: #8b5cf6">
+                <button class="add-btn add-btn-purple" title="Add team member">
                   <i class="ph ph-plus"></i>
                 </button>
                 <span class="time-badge purple">3 week left</span>
@@ -191,7 +188,7 @@
             <article class="project-card green">
               <div class="project-header">
                 <span class="project-date">July 10, 2020</span>
-                <button class="project-menu">
+                <button class="project-menu" title="More options">
                   <i class="ph ph-dots-three-vertical"></i>
                 </button>
               </div>
@@ -199,7 +196,7 @@
               <p class="project-subtitle">Medical</p>
               <span class="progress-label">Progress</span>
               <div class="progress-bar">
-                <div class="progress-fill green" style="width: 50%"></div>
+                <div class="progress-fill green progress-50"></div>
               </div>
               <span class="progress-percentage">50%</span>
               <hr class="white-line" />
@@ -216,7 +213,7 @@
                     class="project-avatar"
                   />
                 </div>
-                <button class="add-btn" style="background: #10b981">
+                <button class="add-btn add-btn-green" title="Add team member">
                   <i class="ph ph-plus"></i>
                 </button>
                 <span class="time-badge green">2 week left</span>
@@ -226,7 +223,7 @@
             <article class="project-card pink">
               <div class="project-header">
                 <span class="project-date">July 15, 2020</span>
-                <button class="project-menu">
+                <button class="project-menu" title="More options">
                   <i class="ph ph-dots-three-vertical"></i>
                 </button>
               </div>
@@ -234,7 +231,7 @@
               <p class="project-subtitle">Wireframing</p>
               <span class="progress-label">Progress</span>
               <div class="progress-bar">
-                <div class="progress-fill pink" style="width: 20%"></div>
+                <div class="progress-fill pink progress-20"></div>
               </div>
               <span class="progress-percentage">20%</span>
               <hr class="white-line" />
@@ -251,7 +248,7 @@
                     class="project-avatar"
                   />
                 </div>
-                <button class="add-btn" style="background: #ec4899">
+                <button class="add-btn add-btn-pink" title="Add team member">
                   <i class="ph ph-plus"></i>
                 </button>
                 <span class="time-badge pink">3 week left</span>
@@ -259,13 +256,7 @@
             </article>
           </div>
 
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              padding: 1rem 1.25rem 0;
-            "
-          >
+          <div class="projects-footer">
             <span class="project-date">July 20, 2020</span>
             <span class="project-date">July 25, 2020</span>
           </div>
@@ -275,10 +266,10 @@
           <div class="messages-header">
             <h3 class="messages-title">Client Messages</h3>
             <div class="messages-actions">
-              <button class="view-btn">
+              <button class="view-btn" title="Search messages">
                 <i class="ph ph-magnifying-glass"></i>
               </button>
-              <button class="view-btn">
+              <button class="view-btn" title="More options">
                 <i class="ph ph-dots-three-vertical"></i>
               </button>
             </div>
@@ -294,7 +285,7 @@
               <div class="message-content">
                 <div class="message-header">
                   <span class="message-sender">David</span>
-                  <button class="message-star">
+                  <button class="message-star" title="Star message">
                     <i class="ph ph-star"></i>
                   </button>
                 </div>
@@ -306,10 +297,7 @@
               </div>
             </div>
 
-            <div
-              class="message-item"
-              style="background: #f3f6fd; border-left: 3px solid #3b82f6"
-            >
+            <div class="message-item message-item-blue">
               <img
                 src="https://randomuser.me/api/portraits/women/65.jpg"
                 alt="Stephanie"
@@ -318,7 +306,7 @@
               <div class="message-content">
                 <div class="message-header">
                   <span class="message-sender">Stephanie</span>
-                  <button class="message-star" style="color: #fbbf24">
+                  <button class="message-star" title="Star message">
                     <i class="ph-fill ph-star"></i>
                   </button>
                 </div>
@@ -339,7 +327,7 @@
               <div class="message-content">
                 <div class="message-header">
                   <span class="message-sender">William</span>
-                  <button class="message-star">
+                  <button class="message-star" title="Star message">
                     <i class="ph ph-star"></i>
                   </button>
                 </div>
@@ -360,7 +348,7 @@
               <div class="message-content">
                 <div class="message-header">
                   <span class="message-sender">Alona</span>
-                  <button class="message-star">
+                  <button class="message-star" title="Star message">
                     <i class="ph ph-star"></i>
                   </button>
                 </div>
@@ -380,7 +368,7 @@
               <div class="message-content">
                 <div class="message-header">
                   <span class="message-sender">Hira</span>
-                  <button class="message-star">
+                  <button class="message-star" title="Star message">
                     <i class="ph ph-star"></i>
                   </button>
                 </div>
@@ -400,7 +388,7 @@
               <div class="message-content">
                 <div class="message-header">
                   <span class="message-sender">Ghulam</span>
-                  <button class="message-star">
+                  <button class="message-star" title="Star message">
                     <i class="ph ph-star"></i>
                   </button>
                 </div>

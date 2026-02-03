@@ -8,7 +8,7 @@
   gap: $spacing-md;
   align-items: center;
   padding: $spacing-md $spacing-lg;
-  background: $color-white;
+  // background: $color-white;
   border-radius: $radius-xl;
   margin: $spacing-md;
   margin-left: 0;
@@ -116,6 +116,22 @@
 
   &:hover {
     opacity: 0.9;
+  }
+
+  &.add-btn-orange {
+    background: $color-orange;
+  }
+
+  &.add-btn-purple {
+    background: $color-purple;
+  }
+
+  &.add-btn-green {
+    background: $color-green;
+  }
+
+  &.add-btn-pink {
+    background: $color-pink;
   }
 }
 
