@@ -1,0 +1,202 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto;
+  gap: $spacing-md;
+  align-items: center;
+  padding: $spacing-md $spacing-lg;
+  background: $color-white;
+  border-radius: $radius-xl;
+  margin: $spacing-md;
+  margin-left: 0;
+
+  @include respond-to("md") {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.75rem $spacing-md;
+    padding: $spacing-md;
+    margin: $spacing-sm;
+    margin-left: 0;
+  }
+}
+
+.header-left {
+  @include flex-start;
+  gap: $spacing-2xl;
+  min-width: 0;
+
+  @include respond-to("md") {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+  }
+}
+
+.header-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+  white-space: nowrap;
+  margin-left: $spacing-lg;
+
+  @include respond-to("md") {
+    margin-left: $spacing-sm;
+  }
+}
+
+.header-right {
+  @include flex-start;
+  gap: 0.75rem;
+
+  @include respond-to("md") {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+}
+
+.menu-btn {
+  @include button-reset;
+  padding: $spacing-sm;
+  color: $color-secondary;
+  font-size: $font-size-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+
+  @include respond-to("md") {
+    display: none;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    color: $color-secondary;
+  }
+
+  .search-input {
+    width: 22rem;
+    max-width: 100%;
+    padding: $spacing-sm $spacing-md $spacing-sm 2.5rem;
+    border: 1px solid $color-border;
+    border-radius: $radius-2xl;
+    background: #f9fafb;
+    font-size: $font-size-sm;
+
+    &:focus {
+      border-color: $color-primary-light;
+      background: $color-white;
+    }
+
+    &::placeholder {
+      color: $color-secondary;
+    }
+  }
+}
+
+.add-btn {
+  @include circle-btn;
+  background: $color-primary;
+  color: $color-white;
+  font-size: 1.1rem;
+  font-weight: 300;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.notification-btn {
+  @include button-reset;
+  @include circle-btn;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    right: 0.25rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: $color-danger;
+    border-radius: $radius-full;
+    border: 2px solid $color-white;
+  }
+
+  i {
+    font-size: 1.2rem;
+    color: $color-secondary;
+  }
+}
+
+.user-profile {
+  @include flex-start;
+  gap: $spacing-sm;
+  cursor: pointer;
+  border-left: 1px solid $color-secondary;
+  padding-left: 0.75rem;
+
+  .user-avatar {
+    @include avatar;
+    background: $color-border;
+  }
+
+  .user-name {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    color: $color-primary;
+
+    @include respond-to("md") {
+      display: none;
+    }
+  }
+}
+
+.standalone-search {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  position: relative;
+  width: 100%;
+  display: none;
+
+  @include respond-to("md") {
+    display: block;
+  }
+
+  .standalone-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    color: $color-secondary;
+  }
+
+  .standalone-search-input {
+    width: 100%;
+    padding: $spacing-sm $spacing-md $spacing-sm 2.5rem;
+    border: 1px solid $color-border;
+    border-radius: $radius-2xl;
+    background: #f9fafb;
+    font-size: $font-size-sm;
+
+    &:focus {
+      border-color: $color-primary-light;
+      background: $color-white;
+    }
+  }
+}

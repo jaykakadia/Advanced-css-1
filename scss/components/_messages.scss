@@ -1,0 +1,143 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.messages-section {
+  margin-top: 19px;
+  height: fit-content;
+  background: $color-white;
+  border-radius: $radius-xl;
+
+  @include respond-to("lg") {
+    margin: $spacing-md;
+  }
+}
+
+.messages-header {
+  @include flex-between;
+  margin-bottom: 10px;
+  padding: 22px 17px 18px 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: -$spacing-md;
+    width: calc(100% + 0.125rem);
+    height: 1px;
+    background: #ddd;
+  }
+}
+
+.messages-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.messages-actions {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.messages-list {
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include hide-scrollbar;
+
+  @include respond-to("md") {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
+.message-item {
+  display: flex;
+  gap: 12px;
+  padding: $spacing-md 1.16rem;
+  position: relative;
+  @include transition(background);
+
+  &.first-message {
+    padding-top: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: $color-white;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -$spacing-2xl;
+    right: -$spacing-md;
+    width: calc(100% + 5.325rem);
+    height: 1px;
+    background: #ddd;
+  }
+
+  &.active {
+    background: $color-background;
+    border-left: 3px solid $color-primary-light;
+
+    .message-star {
+      color: $color-star;
+    }
+  }
+}
+
+.message-avatar {
+  @include avatar(40px);
+  background: $color-border;
+  flex-shrink: 0;
+}
+
+.message-content {
+  flex: 1;
+  @include flex-column;
+}
+
+.message-header {
+  @include flex-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.message-sender {
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.message-star {
+  @include button-reset;
+  padding: 2px;
+  color: $color-secondary;
+
+  &:hover {
+    color: $color-star;
+  }
+}
+
+.message-text {
+  font-size: $font-size-sm;
+  color: $color-secondary;
+  line-height: 1.4;
+  @include truncate(2);
+}
+
+.message-time {
+  font-size: $font-size-xs;
+  color: $color-secondary;
+  align-self: flex-end;
+  margin-top: $spacing-xs;
+}

@@ -1,0 +1,141 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.project-card {
+  border-radius: $radius-3xl;
+  padding: 20px;
+  position: relative;
+  border: 1px solid rgba($color-white, 0.1);
+  @include transition;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      border-radius: 2px;
+    }
+
+    &::before {
+      bottom: -8px;
+      width: 70%;
+      background: currentColor;
+    }
+
+    &::after {
+      bottom: -14px;
+      width: 40%;
+      background: currentColor;
+    }
+  }
+
+  &.orange {
+    background: $color-orange-bg;
+
+    &:hover::before,
+    &:hover::after {
+      background: $color-orange;
+    }
+  }
+
+  &.green {
+    background: $color-green-bg;
+
+    &:hover::before,
+    &:hover::after {
+      background: $color-green;
+    }
+  }
+
+  &.pink {
+    background: $color-pink-bg;
+
+    &:hover::before,
+    &:hover::after {
+      background: $color-pink;
+    }
+  }
+
+  &.purple {
+    background: $color-purple-bg;
+    margin-bottom: 25px;
+
+    &:hover::before,
+    &:hover::after {
+      background: $color-purple;
+    }
+  }
+
+  &.blue {
+    background: $color-white;
+    box-shadow: $shadow-lg;
+
+    &:hover::before,
+    &:hover::after {
+      background: $color-blue;
+    }
+  }
+}
+
+.project-header {
+  @include flex-between;
+  margin-bottom: $spacing-md;
+}
+
+.project-date {
+  font-size: $font-size-sm;
+  color: $color-secondary;
+}
+
+.project-menu {
+  @include button-reset;
+  color: $color-primary;
+  padding: $spacing-xs;
+  font-size: $font-size-xl;
+  font-weight: 800;
+}
+
+.project-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text;
+  margin-bottom: 0.435rem;
+}
+
+.project-subtitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text;
+  margin-bottom: $spacing-md;
+}
+
+.project-footer {
+  @include flex-between;
+}
+
+.project-avatars {
+  display: flex;
+  gap: -8px;
+
+  .project-avatar {
+    @include avatar(24px);
+    border: 2px solid $color-white;
+    margin-left: -8px;
+    background: $color-secondary;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

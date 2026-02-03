@@ -1,9 +1,418 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Portfolio - Project Management Dashboard"
+    />
+    <title>Portfolio | Project Management Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <aside class="sidebar">
+      <button class="sidebar-btn menu">
+        <i class="ph ph-list"></i>
+      </button>
+      <button class="sidebar-btn active">
+        <i class="ph-fill ph-house-simple"></i>
+      </button>
+      <button class="sidebar-btn">
+        <i class="ph ph-user"></i>
+      </button>
+      <button class="sidebar-btn">
+        <i class="ph ph-folder-simple"></i>
+      </button>
+      <button class="sidebar-btn">
+        <i class="ph ph-clock"></i>
+      </button>
+      <button class="sidebar-btn">
+        <i class="ph ph-chart-line-up"></i>
+      </button>
+      <button class="sidebar-btn">
+        <i class="ph ph-chat-circle-dots"></i>
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <div class="header-left">
+          <button class="menu-btn">
+            <i class="ph ph-list"></i>
+          </button>
+          <h1 class="header-title">Portfolio</h1>
+          <div class="search-box">
+            <i class="ph ph-magnifying-glass search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search" />
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="add-btn">
+            <i class="ph ph-plus"></i>
+          </button>
+          <button class="notification-btn">
+            <i class="ph ph-bell"></i>
+          </button>
+          <div class="user-profile">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Hira R"
+              class="user-avatar"
+            />
+            <span class="user-name">Hira R</span>
+          </div>
+        </div>
+        <div class="standalone-search">
+          <i class="ph ph-magnifying-glass standalone-search-icon"></i>
+          <input
+            type="text"
+            class="standalone-search-input"
+            placeholder="Search"
+          />
+        </div>
+      </header>
+
+      <div class="dashboard">
+        <section class="projects-section">
+          <div class="projects-header">
+            <h2 class="projects-title">Projects</h2>
+            <span class="projects-date">July, 2020</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">45</div>
+              <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">12</div>
+              <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Upcoming</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">67</div>
+              <div class="stat-label">Total Project</div>
+            </div>
+            <div class="view-options">
+              <button class="view-btn">
+                <i class="ph ph-squares-four"></i>
+              </button>
+              <button class="view-btn active">
+                <i class="ph ph-list"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card orange">
+              <div class="project-header">
+                <span class="project-date">July 2, 2020</span>
+                <button class="project-menu">
+                  <i class="ph ph-dots-three-vertical"></i>
+                </button>
+              </div>
+              <h3 class="project-title">Web Designing</h3>
+              <p class="project-subtitle">Prototyping</p>
+              <span class="progress-label">Progress</span>
+              <div class="progress-bar">
+                <div class="progress-fill orange" style="width: 90%"></div>
+              </div>
+              <span class="progress-percentage">90%</span>
+              <hr class="white-line" />
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/1.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://randomuser.me/api/portraits/men/2.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                </div>
+                <button class="add-btn" style="background: #f97316">
+                  <i class="ph ph-plus"></i>
+                </button>
+                <span class="time-badge orange">2 Days Left</span>
+              </div>
+            </article>
+
+            <article class="project-card purple">
+              <div class="project-header">
+                <span class="project-date">July 5, 2020</span>
+                <button class="project-menu">
+                  <i class="ph ph-dots-three-vertical"></i>
+                </button>
+              </div>
+              <h3 class="project-title">Mobile App</h3>
+              <p class="project-subtitle">Shopping</p>
+              <span class="progress-label">Progress</span>
+              <div class="progress-bar">
+                <div class="progress-fill purple" style="width: 30%"></div>
+              </div>
+              <span class="progress-percentage">30%</span>
+              <hr class="white-line" />
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/3.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://randomuser.me/api/portraits/men/4.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                </div>
+                <button class="add-btn" style="background: #8b5cf6">
+                  <i class="ph ph-plus"></i>
+                </button>
+                <span class="time-badge purple">3 week left</span>
+              </div>
+            </article>
+
+            <article class="project-card green">
+              <div class="project-header">
+                <span class="project-date">July 10, 2020</span>
+                <button class="project-menu">
+                  <i class="ph ph-dots-three-vertical"></i>
+                </button>
+              </div>
+              <h3 class="project-title">Dashboard</h3>
+              <p class="project-subtitle">Medical</p>
+              <span class="progress-label">Progress</span>
+              <div class="progress-bar">
+                <div class="progress-fill green" style="width: 50%"></div>
+              </div>
+              <span class="progress-percentage">50%</span>
+              <hr class="white-line" />
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/5.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://randomuser.me/api/portraits/men/6.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                </div>
+                <button class="add-btn" style="background: #10b981">
+                  <i class="ph ph-plus"></i>
+                </button>
+                <span class="time-badge green">2 week left</span>
+              </div>
+            </article>
+
+            <article class="project-card pink">
+              <div class="project-header">
+                <span class="project-date">July 15, 2020</span>
+                <button class="project-menu">
+                  <i class="ph ph-dots-three-vertical"></i>
+                </button>
+              </div>
+              <h3 class="project-title">Web Designing</h3>
+              <p class="project-subtitle">Wireframing</p>
+              <span class="progress-label">Progress</span>
+              <div class="progress-bar">
+                <div class="progress-fill pink" style="width: 20%"></div>
+              </div>
+              <span class="progress-percentage">20%</span>
+              <hr class="white-line" />
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/7.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://randomuser.me/api/portraits/men/8.jpg"
+                    alt="Team member"
+                    class="project-avatar"
+                  />
+                </div>
+                <button class="add-btn" style="background: #ec4899">
+                  <i class="ph ph-plus"></i>
+                </button>
+                <span class="time-badge pink">3 week left</span>
+              </div>
+            </article>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              padding: 1rem 1.25rem 0;
+            "
+          >
+            <span class="project-date">July 20, 2020</span>
+            <span class="project-date">July 25, 2020</span>
+          </div>
+        </section>
+
+        <aside class="messages-section">
+          <div class="messages-header">
+            <h3 class="messages-title">Client Messages</h3>
+            <div class="messages-actions">
+              <button class="view-btn">
+                <i class="ph ph-magnifying-glass"></i>
+              </button>
+              <button class="view-btn">
+                <i class="ph ph-dots-three-vertical"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="messages-list">
+            <div class="message-item first-message">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="David"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">David</span>
+                  <button class="message-star">
+                    <i class="ph ph-star"></i>
+                  </button>
+                </div>
+                <p class="message-text">
+                  Hey tell me about progress of project? Waiting for your
+                  response
+                </p>
+                <span class="message-time">21 July</span>
+              </div>
+            </div>
+
+            <div
+              class="message-item"
+              style="background: #f3f6fd; border-left: 3px solid #3b82f6"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Stephanie"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Stephanie</span>
+                  <button class="message-star" style="color: #fbbf24">
+                    <i class="ph-fill ph-star"></i>
+                  </button>
+                </div>
+                <p class="message-text">
+                  I got your first assignment. It was quite good👍You can start
+                  work on next assignment
+                </p>
+                <span class="message-time">19 July</span>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://randomuser.me/api/portraits/men/75.jpg"
+                alt="William"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">William</span>
+                  <button class="message-star">
+                    <i class="ph ph-star"></i>
+                  </button>
+                </div>
+                <p class="message-text">
+                  I want some changes in previous work you sent me. Waiting for
+                  your reply.
+                </p>
+                <span class="message-time">17 July</span>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://randomuser.me/api/portraits/women/45.jpg"
+                alt="Alona"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Alona</span>
+                  <button class="message-star">
+                    <i class="ph ph-star"></i>
+                  </button>
+                </div>
+                <p class="message-text">
+                  I am really impressed from your work😊 Keep doing great work
+                </p>
+                <span class="message-time">15 July</span>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Hira"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Hira</span>
+                  <button class="message-star">
+                    <i class="ph ph-star"></i>
+                  </button>
+                </div>
+                <p class="message-text">
+                  When you start redesign of app? Previous project was perfect😍
+                </p>
+                <span class="message-time">21 July</span>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://randomuser.me/api/portraits/men/22.jpg"
+                alt="Ghulam"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Ghulam</span>
+                  <button class="message-star">
+                    <i class="ph ph-star"></i>
+                  </button>
+                </div>
+                <p class="message-text">
+                  I want to let you know I am agree on that
+                </p>
+                <span class="message-time">12 July</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
 </html>

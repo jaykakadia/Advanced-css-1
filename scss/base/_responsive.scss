@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@media (max-width: $breakpoint-lg) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  * {
+    font-size: 14px;
+  }
+
+  .projects-grid {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .messages-list {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .header-left {
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .stat-card:nth-child(-n + 3)::after {
+    display: none;
+    content: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    .view-options {
+      transform: translateY(50%);
+      grid-column: 2 / -1;
+    }
+  }
+
+  .sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $sidebar-width-mobile;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 $spacing-sm;
+    background-color: $color-background;
+
+    .sidebar-btn.menu {
+      display: none;
+      margin-bottom: 0;
+    }
+
+    .sidebar-btn {
+      margin: 0 $spacing-sm;
+    }
+  }
+
+  .time-badge {
+    padding: 0.6625rem $spacing-sm;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .projects-section {
+    padding: $spacing-xl !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    overflow-y: visible;
+    max-height: none;
+  }
+}

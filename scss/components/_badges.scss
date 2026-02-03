@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.time-badge {
+  padding: 0.5625rem $spacing-lg;
+  border-radius: $radius-xl;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+
+  &.orange {
+    background: $color-white;
+    color: $color-orange;
+  }
+
+  &.green {
+    background: $color-white;
+    color: $color-green;
+  }
+
+  &.pink {
+    background: $color-white;
+    color: $color-pink;
+  }
+
+  &.purple {
+    background: $color-white;
+    color: $color-purple;
+  }
+
+  &.blue {
+    background: $color-blue-bg;
+    color: #00bbf3;
+  }
+
+  @include respond-to("md") {
+    padding: 0.6625rem $spacing-sm;
+  }
+}
