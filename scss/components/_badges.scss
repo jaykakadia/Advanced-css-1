@@ -34,6 +34,10 @@
     background: $color-blue-bg;
     color: #00bbf3;
   }
+  &.darkgrey {
+    background: $color-white;
+    color: $color-grey;
+  }
 
   @include respond-to("md") {
     padding: 0.6625rem $spacing-sm;

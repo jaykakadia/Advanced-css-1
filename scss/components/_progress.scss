@@ -45,6 +45,9 @@
   &.blue {
     background: $color-blue;
   }
+  &.darkgrey {
+    background: #4d4d4d;
+  }
 }
 
 .progress-percentage {
@@ -67,4 +70,7 @@
 }
 .progress-20{
   width: 20%;
+}
+.progress-90{
+  width: 90%;
 }

@@ -68,6 +68,14 @@
       background: $color-pink-bg;
     }
   }
+  &.grey {
+    background: $color-grey-bg;
+
+    &:hover::before,
+    &:hover::after {
+      background: $color-grey-bg;
+    }
+  }
 
   &.purple {
     background: $color-purple-bg;
