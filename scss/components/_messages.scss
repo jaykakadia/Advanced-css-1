@@ -101,6 +101,13 @@
     }
   }
 }
+.message-item:hover {
+  .star-icon {
+    fill: black;
+    stroke: black;
+  }
+}
+
 
 .message-avatar {
   @include avatar(50px);
@@ -126,13 +133,25 @@
 
 .message-star {
   @include button-reset;
-  padding: 2px;
-  color: $color-secondary;
+  padding: 4px;
+  border-radius: 50%;
 
-  &:hover {
-    color: $color-star;
+  .star-icon {
+    width: 15px;
+    height: 15px;
+    fill: transparent;
+    stroke: $color-secondary;
+    stroke-width: 1.5;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+  }
+
+
+  &:hover .star-icon {
+    fill: black;
+    stroke: black;
   }
 }
+
 
 .message-text {
   font-size: $font-size-xs;
