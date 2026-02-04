@@ -83,6 +83,14 @@
     padding: 0.6625rem $spacing-sm;
   }
 }
+@media (max-width: $breakpoint-sd) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+
+  }
+  .project-card {
+  }
+}
 
 @media (max-width: $breakpoint-sm) {
   .projects-section {
