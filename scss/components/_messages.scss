@@ -58,18 +58,23 @@
 .message-item {
   display: flex;
   gap: 12px;
+  align-items: center;
   padding: ($spacing-md  + 0.5rem) (1.16rem + 0.5rem);
   position: relative;
   @include transition(background);
-
+  
   // &.first-message {
-  //   padding-top: 0;
-  // }
-
-  &:hover {
-    cursor: pointer;
-    background: $color-white;
-    transform: scale(1.05);
+    //   padding-top: 0;
+    // }
+    
+    &:hover {
+      cursor: pointer;
+      background: $color-white;
+      transform: scale(1.05);
+      .message-star {
+        color: $color-star;
+      }
+      transition: transform 0.2s ease-in;
   }
 
   &:last-child {
@@ -98,7 +103,7 @@
 }
 
 .message-avatar {
-  @include avatar(40px);
+  @include avatar(50px);
   background: $color-border;
   flex-shrink: 0;
 }

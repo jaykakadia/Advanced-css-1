@@ -36,7 +36,7 @@
 .projects-date {
   font-size: $font-size-sm;
   font-weight: $font-weight-semibold;
-  color: $color-secondary;
+  color: $color-primary;
 }
 
 .stats-grid {
@@ -113,7 +113,8 @@
   transform: scale(1.3);
 
   &:hover {
-    background: $color-white;
+    background: $color-background;
+
   }
 
   &.active {
@@ -152,9 +153,9 @@
 }
 
 .white-line {
-  width: calc(100% + 40px);
-  background-color: rgba($color-white, 0.46);
+  width: calc(100% + 44px);
+  background-color: rgba($color-white, 1.46);
   height: 2px;
   border: none;
-  margin: $spacing-md -1.2rem;
+  margin: $spacing-md -1.4rem;
 }

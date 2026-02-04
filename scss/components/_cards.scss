@@ -42,6 +42,14 @@
       background: $color-orange-bg;
     }
   }
+  &.white {
+    background: $color-white;
+    box-shadow: $shadow-lg;
+    &:hover::before,
+    &:hover::after {
+      background: rgba($color-blue, 0.2);
+    }
+  }
 
   &.green {
     background: $color-green-bg;
@@ -123,13 +131,18 @@
 .project-footer {
   @include flex-between;
 }
+.project-footer-rigthside {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
 
 .project-avatars {
   display: flex;
   gap: -8px;
 
   .project-avatar {
-    @include avatar(24px);
+    @include avatar(35px);
     border: 2px solid $color-white;
     margin-left: -8px;
     background: $color-secondary;

@@ -58,6 +58,12 @@
   @include flex-center;
 }
 
+@mixin avatarheader($size: 2.5rem) {
+  width: $size;
+  height: $size;
+  border-radius: $radius-full;
+  object-fit: cover;
+}
 @mixin avatar($size: 2rem) {
   width: $size;
   height: $size;
