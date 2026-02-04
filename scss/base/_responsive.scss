@@ -11,11 +11,15 @@
     overflow-y: visible;
   }
 }
+@media (max-width:935px){
+  // 
+}
 
 @media (max-width: $breakpoint-md) {
   * {
     font-size: 14px;
   }
+
 
   .projects-grid {
     max-height: none;
@@ -82,9 +86,28 @@
 
 @media (max-width: $breakpoint-sm) {
   .projects-section {
-    padding: $spacing-xl !important;
+    padding: 2rem 0.5rem !important;
   }
-
+  .time-badge {
+    padding: $spacing-sm $spacing-xs;
+  }
+  .message-text {
+    font-size: $font-size-xs;
+    line-height: 1;
+  }
+  .message-item {
+    padding: $spacing-sm 0;
+    gap: $spacing-xs;
+  }
+  .message-avatar {
+    @include avatar(2.5rem);
+  }
+  .messages-title {
+    font-size: $font-size-sm;
+  }
+  .messages-header{
+    padding-inline: 0;
+  }
   .projects-grid {
     grid-template-columns: 1fr;
     overflow-y: visible;

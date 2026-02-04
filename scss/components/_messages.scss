@@ -135,10 +135,11 @@
 }
 
 .message-text {
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
   color: $color-secondary;
-  line-height: 1.4;
-  @include truncate(2);
+  line-height: 1.1;
+  // @include truncate(2);
+  // overflow-y: scroll;
 }
 
 .message-time {
@@ -147,3 +148,4 @@
   align-self: flex-end;
   margin-top: $spacing-xs;
 }
+
