@@ -43,7 +43,7 @@
 .projects-header {
   @include flex-between;
   margin-bottom: 30px;
-  padding-inline: 7px;
+  padding-inline: 4px;
   @include respond-to("md") {
     margin-bottom: 0.5rem;
   }
@@ -90,9 +90,9 @@
   text-align: start;
   padding-left: $spacing-md;
   position: relative;
-  @media(max-width: 353px){
-     padding-left: 0;
-    }
+  @media (max-width: 353px) {
+    padding-left: 0;
+  }
 
   &:nth-child(-n + 3)::after {
     content: "";
@@ -111,8 +111,8 @@
     @include respond-to("md") {
       display: none;
     }
-    @media(max-width: 353px){
-     padding-left: 0;
+    @media (max-width: 353px) {
+      padding-left: 0;
     }
   }
 }
@@ -165,7 +165,7 @@
   gap: 20px;
   padding: 7px;
   overflow-x: scroll;
-  max-height: 57dvh;
+  max-height: calc(100dvh - 230px);
   @include hide-scrollbar;
 
   @include respond-to("md") {

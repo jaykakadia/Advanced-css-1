@@ -121,7 +121,7 @@ input {
   font-weight: 700;
   color: #1e293b;
   white-space: nowrap;
-  margin-left: 1.7rem;
+  margin-left: 1.5rem;
 }
 @media (max-width: 768px) {
   .header-title {
@@ -148,7 +148,7 @@ input {
 }
 @media (max-width: 480px) {
   .header-right {
-    gap: 0;
+    gap: 0.5rem;
   }
 }
 
@@ -354,8 +354,8 @@ input {
   cursor: pointer;
   padding: 0;
   outline: none;
-  width: 48px;
-  height: 48px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -369,6 +369,18 @@ input {
 .sidebar-btn .dark-icon {
   color: #000;
   font-weight: 800;
+}
+@media (max-width: 768px) {
+  .sidebar-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar-btn {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 .sidebar-btn:hover,
 .sidebar-btn .dark-icon:hover {
@@ -469,7 +481,7 @@ input {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
-  padding-inline: 7px;
+  padding-inline: 4px;
 }
 @media (max-width: 768px) {
   .projects-header {
@@ -609,7 +621,7 @@ input {
   gap: 20px;
   padding: 7px;
   overflow-x: scroll;
-  max-height: 57dvh;
+  max-height: calc(100dvh - 230px);
 }
 .projects-grid::-webkit-scrollbar {
   width: 0;
@@ -918,7 +930,6 @@ input {
 }
 
 .messages-section {
-  margin-top: 19px;
   height: fit-content;
   border-radius: 1.25rem;
 }
@@ -935,7 +946,9 @@ input {
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.2s;
-    overflow-y: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     border-radius: 0;
   }
   .messages-section.active {
@@ -978,7 +991,7 @@ input {
 }
 
 .messages-list {
-  max-height: 70dvh;
+  max-height: calc(100dvh - 160px);
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -990,6 +1003,12 @@ input {
 .messages-list {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+@media (max-width: 1024px) {
+  .messages-list {
+    max-height: none;
+    flex: 1;
+  }
 }
 @media (max-width: 768px) {
   .messages-list {
@@ -1203,10 +1222,10 @@ input {
     object-fit: cover;
   }
   .messages-title {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
   }
   .messages-header {
-    padding-inline: 0.25rem;
+    padding-inline: 0.5rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;

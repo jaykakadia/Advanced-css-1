@@ -10,7 +10,7 @@
 }
 
 .messages-section {
-  margin-top: 19px;
+  // margin-top: 19px;
   height: fit-content;
   // background: $color-white;
   border-radius: $radius-xl;
@@ -27,7 +27,9 @@
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.2s;
-    overflow-y: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     border-radius: 0;
 
     &.active {
@@ -70,11 +72,16 @@
 }
 
 .messages-list {
-  max-height: 70dvh;
+  max-height: calc(100dvh - 160px);
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   @include hide-scrollbar;
+
+  @include respond-to("lg") {
+    max-height: none;
+    flex: 1;
+  }
 
   @include respond-to("md") {
     max-height: none;
