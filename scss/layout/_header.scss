@@ -26,7 +26,6 @@
   @include respond-to("md") {
     gap: 0;
   }
-
 }
 
 .header-left {
@@ -130,13 +129,15 @@
   }
 
   .search-input {
-    max-width: 100%;
+    width: 50%;
     padding: $spacing-sm $spacing-md $spacing-sm 2.5rem;
     border: 1px solid $color-border;
     border-radius: $radius-2xl;
     background: #fff;
     font-size: $font-size-sm;
-
+     @include respond-to("lg") {
+      width: 100%;
+    }
     &:focus {
       border-color: $color-primary-light;
       background: $color-white;
@@ -225,7 +226,7 @@
     font-weight: ($font-weight-bold + 100);
     font-size: $font-size-base;
     color: $color-primary;
-   
+
     // @include respond-to("sm") {
     //   display: none;
     // }
