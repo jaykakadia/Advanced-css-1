@@ -620,6 +620,14 @@ input {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 7px;
+}
+.projects-grid::after {
+  content: "";
+  display: block;
+  height: 10px;
+  grid-column: 1/-1;
+}
+.projects-grid {
   overflow-x: scroll;
   max-height: calc(100dvh - 230px);
 }
