@@ -1,6 +1,14 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+.messages-close-btn {
+  display: none;
+
+  @include respond-to("lg") {
+    display: flex;
+  }
+}
+
 .messages-section {
   margin-top: 19px;
   height: fit-content;
@@ -8,7 +16,27 @@
   border-radius: $radius-xl;
 
   @include respond-to("lg") {
-    margin: $spacing-md;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    margin: 0;
+    background: $color-background;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    overflow-y: auto;
+    border-radius: 0;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  @include respond-to("md") {
+    width: 100%;
   }
 }
 
@@ -59,22 +87,22 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  padding: ($spacing-md  + 0.5rem) (1.16rem + 0.5rem);
+  padding: ($spacing-md + 0.5rem) (1.16rem + 0.5rem);
   position: relative;
   @include transition(background);
-  
+
   // &.first-message {
-    //   padding-top: 0;
-    // }
-    
-    &:hover {
-      cursor: pointer;
-      background: $color-white;
-      transform: scale(1.05);
-      .message-star {
-        color: $color-star;
-      }
-      transition: transform 0.2s ease-in;
+  //   padding-top: 0;
+  // }
+
+  &:hover {
+    cursor: pointer;
+    background: $color-white;
+    transform: scale(1.05);
+    .message-star {
+      color: $color-star;
+    }
+    transition: transform 0.2s ease-in;
   }
 
   &:last-child {
@@ -107,7 +135,6 @@
     stroke: black;
   }
 }
-
 
 .message-avatar {
   @include avatar(50px);
@@ -142,16 +169,16 @@
     fill: transparent;
     stroke: $color-secondary;
     stroke-width: 1.5;
-    transition: fill 0.2s ease, stroke 0.2s ease;
+    transition:
+      fill 0.2s ease,
+      stroke 0.2s ease;
   }
-
 
   &:hover .star-icon {
     fill: black;
     stroke: black;
   }
 }
-
 
 .message-text {
   font-size: $font-size-xs;
@@ -167,4 +194,3 @@
   align-self: flex-end;
   margin-top: $spacing-xs;
 }
-

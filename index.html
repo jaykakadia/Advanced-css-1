@@ -40,7 +40,7 @@
       <button class="sidebar-btn" title="Analytics">
         <i class="ph ph-chart-line-up"></i>
       </button>
-      <button class="sidebar-btn" title="Messages">
+      <button class="sidebar-btn" id="messages-toggle-btn" title="Messages">
         <i class="ph ph-chat-circle-dots"></i>
       </button>
     </aside>
@@ -358,6 +358,13 @@
               <button class="view-btn" title="More options">
                 <i class="ph ph-dots-three-vertical"></i>
               </button>
+              <button
+                class="view-btn messages-close-btn"
+                id="messages-close-btn"
+                title="Close messages"
+              >
+                <i class="ph ph-x"></i>
+              </button>
             </div>
           </div>
 
@@ -536,5 +543,7 @@
         </aside>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
