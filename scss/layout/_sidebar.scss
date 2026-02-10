@@ -9,7 +9,7 @@
   height: 100vh;
   @include flex-column;
   align-items: center;
-  padding-top:($spacing-lg - 0.25rem);
+  padding-top: ($spacing-lg - 0.25rem);
   z-index: 100;
   background: transparent;
 
@@ -35,8 +35,12 @@
   color: $color-secondary;
   font-size: $font-size-xl;
   @include transition;
-
-  &:hover {
+.dark-icon{
+  color: #000;
+  font-weight: 800;
+}
+  &:hover,
+  .dark-icon:hover {
     background: $color-primary;
     border-radius: $radius-full;
     color: #fff;
@@ -76,5 +80,10 @@
   @include respond-to("md") {
     margin-left: 0;
     padding-bottom: $sidebar-width-mobile;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
   }
 }

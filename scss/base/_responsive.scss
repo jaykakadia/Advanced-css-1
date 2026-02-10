@@ -8,27 +8,29 @@
 
   body {
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
   }
 }
-@media (max-width:935px){
-  // 
+@media (max-width: 935px) {
+  //
 }
 
 @media (max-width: $breakpoint-md) {
   * {
     font-size: 14px;
   }
-
+  body {
+    overflow: hidden;
+  }
 
   .projects-grid {
     max-height: none;
-    overflow-y: visible;
+    overflow-y: auto;
   }
 
   .messages-list {
     max-height: none;
-    overflow-y: visible;
+    overflow-y: scroll;
     padding-right: 0;
   }
 
@@ -50,11 +52,13 @@
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr) 0.5fr;
 
     .view-options {
-      transform: translateY(50%);
-      grid-column: 2 / -1;
+      flex-direction: column;
+      transform: translateY(0);
+
+      grid-column: 5 / -1;
     }
   }
 
@@ -86,7 +90,6 @@
 @media (max-width: $breakpoint-sd) {
   .projects-grid {
     grid-template-columns: 1fr;
-
   }
   .project-card {
   }
@@ -95,6 +98,7 @@
 @media (max-width: $breakpoint-sm) {
   .projects-section {
     padding: 2rem 0.95rem !important;
+    padding-bottom: 0 !important;
   }
   .time-badge {
     padding: $spacing-sm $spacing-xs;
@@ -113,12 +117,12 @@
   .messages-title {
     font-size: $font-size-sm;
   }
-  .messages-header{
-    padding-inline: 0;
+  .messages-header {
+    padding-inline: 0.25rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;
-    overflow-y: visible;
+    overflow-y: auto;
     max-height: none;
   }
 }

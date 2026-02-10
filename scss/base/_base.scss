@@ -9,6 +9,12 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  @media (max-width: 476px) {
+    font-size: 14px;
+  }
+  @media (max-width: 418px) {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -23,6 +29,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 a {

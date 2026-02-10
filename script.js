@@ -5,8 +5,13 @@ const messagesSection = document.querySelector(".messages-section");
 
 messagesToggleBtn.addEventListener("click", () => {
   messagesSection.classList.toggle("active");
+  document.body.classList.toggle(
+    "no-scroll",
+    messagesSection.classList.contains("active"),
+  );
 });
 
 messagesCloseBtn.addEventListener("click", () => {
   messagesSection.classList.remove("active");
+  document.body.classList.remove("no-scroll");
 });

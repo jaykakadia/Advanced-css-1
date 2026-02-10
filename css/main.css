@@ -8,6 +8,16 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+@media (max-width: 476px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 418px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -21,6 +31,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
+}
+body.no-scroll {
+  overflow: hidden;
 }
 
 a {
@@ -62,7 +75,6 @@ input {
   align-items: center;
   padding: 1rem 1.5rem;
   border-radius: 1.25rem;
-  margin: 1rem;
   margin-left: 0;
 }
 @media (max-width: 768px) {
@@ -71,6 +83,8 @@ input {
     grid-template-rows: auto auto;
     gap: 0.75rem 1rem;
     padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
     margin: 0.5rem;
     margin-left: 0;
   }
@@ -107,11 +121,16 @@ input {
   font-weight: 700;
   color: #1e293b;
   white-space: nowrap;
-  margin-left: 2rem;
+  margin-left: 1.7rem;
 }
 @media (max-width: 768px) {
   .header-title {
-    margin-left: 0.5rem;
+    margin-left: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .header-title {
+    margin-left: 0.3rem;
   }
 }
 
@@ -140,7 +159,7 @@ input {
   padding: 0;
   outline: none;
   padding: 0.5rem;
-  color: #64748b;
+  color: black;
   font-size: 1rem;
 }
 .menu-btn:hover {
@@ -261,8 +280,8 @@ input {
 .notification-btn::after {
   content: "";
   position: absolute;
-  top: 0.2rem;
-  right: 0.25rem;
+  top: 0.1rem;
+  right: 0.15rem;
   width: 0.6rem;
   height: 0.6rem;
   background: #ff0000;
@@ -270,7 +289,7 @@ input {
   border: 2px solid #ffffff;
 }
 .notification-btn i {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   color: #64748b;
 }
 
@@ -294,11 +313,6 @@ input {
   font-weight: 800;
   font-size: 1rem;
   color: #1e293b;
-}
-@media (max-width: 480px) {
-  .user-profile .user-name {
-    display: none;
-  }
 }
 
 .sidebar {
@@ -347,7 +361,12 @@ input {
   font-size: 1.25rem;
   transition: all 0.3s ease;
 }
-.sidebar-btn:hover {
+.sidebar-btn .dark-icon {
+  color: #000;
+  font-weight: 800;
+}
+.sidebar-btn:hover,
+.sidebar-btn .dark-icon:hover {
   background: #1e293b;
   border-radius: 50%;
   color: #fff;
@@ -386,6 +405,11 @@ input {
   .main-content {
     margin-left: 0;
     padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
   }
 }
 
@@ -399,12 +423,35 @@ input {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
 
 .projects-section {
   background: #ffffff;
   border-top-left-radius: 2.75rem;
   border-top-right-radius: 2.75rem;
-  padding: 3rem;
+  padding: 2rem;
+  padding-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .projects-section {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
 }
 @media (max-width: 480px) {
   .projects-section {
@@ -416,8 +463,13 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding-inline: 7px;
+}
+@media (max-width: 768px) {
+  .projects-header {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .projects-title {
@@ -443,11 +495,22 @@ input {
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 1200px) {
   .stats-grid {
     gap: 10px;
+  }
+}
+@media (max-width: 530px) {
+  .stats-grid {
+    gap: 0;
+  }
+}
+@media (max-width: 353px) {
+  .stats-grid {
+    margin-left: 0;
   }
 }
 
@@ -456,6 +519,11 @@ input {
   text-align: start;
   padding-left: 1rem;
   position: relative;
+}
+@media (max-width: 353px) {
+  .stat-card {
+    padding-left: 0;
+  }
 }
 .stat-card:nth-child(-n+3)::after {
   content: "";
@@ -474,6 +542,11 @@ input {
 @media (max-width: 768px) {
   .stat-card:nth-child(-n+3)::after {
     display: none;
+  }
+}
+@media (max-width: 353px) {
+  .stat-card:nth-child(-n+3)::after {
+    padding-left: 0;
   }
 }
 
@@ -511,6 +584,7 @@ input {
   outline: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,7 +604,7 @@ input {
   gap: 20px;
   padding: 7px;
   overflow-x: scroll;
-  max-height: 70dvh;
+  max-height: 57dvh;
 }
 .projects-grid::-webkit-scrollbar {
   width: 0;
@@ -542,8 +616,9 @@ input {
 }
 @media (max-width: 768px) {
   .projects-grid {
+    flex: 1;
+    overflow-y: auto;
     max-height: none;
-    overflow-y: visible;
   }
 }
 @media (max-width: 480px) {
@@ -647,7 +722,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-date {
@@ -674,7 +749,6 @@ input {
   font-size: 1.125rem;
   font-weight: 600;
   color: #151522;
-  margin-bottom: 0.435rem;
 }
 
 .project-subtitle {
@@ -684,7 +758,7 @@ input {
   font-size: 0.875rem;
   font-weight: 500;
   color: #64748b;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-footer {
@@ -899,7 +973,7 @@ input {
 }
 
 .messages-list {
-  max-height: 90vh;
+  max-height: 70dvh;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1034,20 +1108,23 @@ input {
   }
   body {
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
   }
 }
 @media (max-width: 768px) {
   * {
     font-size: 14px;
   }
+  body {
+    overflow: hidden;
+  }
   .projects-grid {
     max-height: none;
-    overflow-y: visible;
+    overflow-y: auto;
   }
   .messages-list {
     max-height: none;
-    overflow-y: visible;
+    overflow-y: scroll;
     padding-right: 0;
   }
   .search-input {
@@ -1064,11 +1141,12 @@ input {
     content: none;
   }
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr) 0.5fr;
   }
   .stats-grid .view-options {
-    transform: translateY(50%);
-    grid-column: 2/-1;
+    flex-direction: column;
+    transform: translateY(0);
+    grid-column: 5/-1;
   }
   .sidebar {
     top: auto;
@@ -1100,6 +1178,7 @@ input {
 @media (max-width: 480px) {
   .projects-section {
     padding: 2rem 0.95rem !important;
+    padding-bottom: 0 !important;
   }
   .time-badge {
     padding: 0.5rem 0.25rem;
@@ -1122,11 +1201,11 @@ input {
     font-size: 0.875rem;
   }
   .messages-header {
-    padding-inline: 0;
+    padding-inline: 0.25rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;
-    overflow-y: visible;
+    overflow-y: auto;
     max-height: none;
   }
 }
