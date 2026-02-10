@@ -416,6 +416,7 @@ input {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  padding-inline: 7px;
 }
 
 .projects-title {
@@ -436,6 +437,7 @@ input {
   gap: 1.5rem;
   margin-bottom: 2rem;
   margin-left: -17px;
+  padding-inline: 7px;
 }
 @media (max-width: 768px) {
   .stats-grid {
@@ -525,8 +527,8 @@ input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
-  overflow-x: hidden;
+  padding: 7px;
+  overflow-x: scroll;
   max-height: 70dvh;
 }
 .projects-grid::-webkit-scrollbar {
@@ -1067,7 +1069,7 @@ input {
 }
 @media (max-width: 480px) {
   .projects-section {
-    padding: 2rem 0.5rem !important;
+    padding: 2rem 0.95rem !important;
   }
   .time-badge {
     padding: 0.5rem 0.25rem;

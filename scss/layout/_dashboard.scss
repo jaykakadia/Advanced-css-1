@@ -25,6 +25,7 @@
 .projects-header {
   @include flex-between;
   margin-bottom: 40px;
+  padding-inline: 7px;
 }
 
 .projects-title {
@@ -45,6 +46,7 @@
   gap: $spacing-lg;
   margin-bottom: $spacing-xl;
   margin-left: -17px;
+  padding-inline: 7px;
 
   @include respond-to("md") {
     grid-template-columns: repeat(2, 1fr);
@@ -127,8 +129,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
-  overflow-x: hidden;
+  padding: 7px;
+  overflow-x: scroll;
   max-height: 70dvh;
   @include hide-scrollbar;
 
