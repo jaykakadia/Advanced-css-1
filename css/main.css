@@ -370,6 +370,9 @@ input {
   color: #000;
   font-weight: 800;
 }
+.sidebar-btn .ph-fill, .sidebar-btn .ph {
+  transform: translateY(10%);
+}
 @media (max-width: 768px) {
   .sidebar-btn {
     width: 3rem;
@@ -668,6 +671,10 @@ input {
   height: 2px;
   border: none;
   margin: 1rem -1.4rem;
+}
+
+.white-line-lg {
+  background-color: transparent;
 }
 
 .project-card {
@@ -1199,7 +1206,7 @@ input {
     margin: 0 0.5rem;
   }
   .time-badge {
-    padding: 0.6625rem 0.5rem;
+    padding: 0.6625rem 0.9rem;
   }
 }
 @media (max-width: 600px) {
@@ -1211,9 +1218,6 @@ input {
   .projects-section {
     padding: 2rem 0.95rem !important;
     padding-bottom: 0 !important;
-  }
-  .time-badge {
-    padding: 0.5rem 0.25rem;
   }
   .message-text {
     font-size: 0.75rem;

@@ -84,7 +84,7 @@
   }
 
   .time-badge {
-    padding: 0.6625rem $spacing-sm;
+    padding: 0.6625rem 0.9rem;
   }
 }
 @media (max-width: $breakpoint-sd) {
@@ -100,9 +100,9 @@
     padding: 2rem 0.95rem !important;
     padding-bottom: 0 !important;
   }
-  .time-badge {
-    padding: $spacing-sm $spacing-xs;
-  }
+  // .time-badge {
+  //   padding: $spacing-sm $spacing-xs;
+  // }
   .message-text {
     font-size: $font-size-xs;
     line-height: 1;
